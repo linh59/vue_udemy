@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import ServerStatus from '@/components/ServerStatus'
+import HelloWorld from '@/components/Server/HelloWorld'
+import QuotePage from '@/views/quotePage'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -13,9 +14,9 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/serverstatus',
-      name: 'ServerStatus',
-      component: ServerStatus
+      path: '/QuotePage',
+      name: 'QuotePage',
+      component: QuotePage
     },
   ]
 })
