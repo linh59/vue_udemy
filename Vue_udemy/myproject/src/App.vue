@@ -1,16 +1,18 @@
 <template>
   <div class="container">
-    <header-bar></header-bar>
-    <router-view/>
+    <!-- <header-bar></header-bar> -->
+    <router-view name="header-top"></router-view>
+    <router-view></router-view>
+    <router-view name="header-bottom"></router-view>
   </div>
 </template>
 
 <script>
-  import HeaderBar from './components/Shared/HeaderBar'
+  // import HeaderBar from './components/Shared/HeaderBar'
 
   export default {
     components:{
-      HeaderBar
+      // HeaderBar
     }
   }
 </script>

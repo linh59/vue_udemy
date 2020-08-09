@@ -7,10 +7,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+         <!-- <router-link to="/" tag="li" active-class="active"><a>Home</a></router-link> -->
+        <router-link to="/" active-class="active" exact>Home</router-link>
+        <router-link to="/QuotePage"  active-class="active" >QuotePage</router-link>
+        <router-link to="/FormPage/1"  active-class="active" >FormPage</router-link>
+        <router-link to="/FormPage/2"  active-class="active" >FormPage 2</router-link>
       </div>
     </div>
   </div>

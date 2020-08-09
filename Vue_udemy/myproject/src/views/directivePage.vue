@@ -3,6 +3,7 @@
      <div class="col-12">
          <h1>Directive</h1>
          <p v-text="'Some text'"></p>
+         <p v-highlight="'blue'">My directive</p>
      </div>
   </div>
 </template>

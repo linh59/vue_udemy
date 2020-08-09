@@ -1,5 +1,8 @@
 <template>
   <div class="contanier">
+    <button @click="navigateToHome" class="btn-primary">Got to Home</button>
+    <p>name: {{name}}</p>
+    <router-view></router-view>
     <header-quote :quoteCount="quotes.length" :maxQuotes="maxQuotes"></header-quote>
     <new-quote @quoteAdded="newQuote"></new-quote>
     <quote-grid :quotes="quotes" @quoteDeleted="quoteDelete"></quote-grid>
@@ -18,6 +21,7 @@
 
   export default {
     name: 'QuotePage',
+    props: ['name'],
     data: function() {
       return {
         quotes: [
@@ -35,6 +39,10 @@
       },
       quoteDelete(index){
         this.quotes.splice(index,1);
+      },
+      navigateToHome() {
+          this.$router.push('/');
+          this.$router.push({name: 'HelloWorld'});
       }
     },
     components: {
