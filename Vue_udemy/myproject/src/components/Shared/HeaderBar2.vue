@@ -8,10 +8,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
          <!-- <router-link to="/" tag="li" active-class="active"><a>Home</a></router-link> -->
-        <router-link to="/" active-class="active" exact>Home</router-link>
-        <router-link to="/QuotePage"  active-class="active" >QuotePage</router-link>
-        <router-link to="/FormPage/1"  active-class="active" >FormPage</router-link>
-        <router-link to="/FormPage/2"  active-class="active" >FormPage 2</router-link>
         <router-link to="/home"  active-class="active" >Home</router-link>
         <router-link to="/porfolio"  active-class="active" >Porfolio</router-link>
         <router-link to="/stocks"  active-class="active" >Stocks</router-link>

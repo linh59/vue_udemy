@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- <header-bar></header-bar> -->
+    <header-bar-2></header-bar-2>
     <router-view name="header-top"></router-view>
     <router-view></router-view>
     <router-view name="header-bottom"></router-view>
@@ -8,11 +8,14 @@
 </template>
 
 <script>
-  // import HeaderBar from './components/Shared/HeaderBar'
+  import HeaderBar2 from './components/Shared/HeaderBar2'
 
   export default {
     components:{
-      // HeaderBar
+      HeaderBar2
+    },
+    created() {
+      this.$store.dispatch('initStocks')
     }
   }
 </script>
