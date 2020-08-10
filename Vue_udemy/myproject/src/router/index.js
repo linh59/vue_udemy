@@ -12,6 +12,11 @@ import httpPage from '@/views/httpPage'
 import HeaderBar from '@/components/Shared/HeaderBar'
 import vuexPage from '@/views/vuexPage'
 
+
+import Home from '@/components/Home'
+import Porfolio from '@/components/porfolio/Porfolio'
+import Stocks from '@/components/stocks/Stocks'
+
 Vue.use(Router)
 
 export default new Router({
@@ -62,6 +67,21 @@ export default new Router({
       path: '/vuex',
       name: 'vuexPage',
       component: vuexPage
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/porfolio',
+      name: 'porfolio',
+      component: Porfolio
+    },
+    {
+      path: '/stocks',
+      name: 'stocks',
+      component: Stocks
     },
     {
       path: '*',
