@@ -1,7 +1,7 @@
 <template>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <div>Funds: {{ funds }}</div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,14 +14,40 @@
 
       </div>
     </div>
+    <button type="button" @click="savedata" class="btn btn-primary">Save data</button>
+    <button type="button" @click="loaddata" class="btn btn-primary">Load data</button>
+
   </div>
 </nav>
 </template>
 
 <script>
-export default {
-  name: 'HeaderBar',
+import {mapActions} from 'vuex'
 
+export default {
+  name: 'HeaderBar2',
+  computed: {
+    funds() {
+      return this.$store.getters.funds;
+    }
+
+  },
+  methods: {
+    ...mapActions({
+      fetchData: 'loadData'
+    }),
+    savedata() {
+      const data = {
+        funds: this.$store.getters.funds,
+        stockPofolio: this.$store.getters.stockPofolio,
+        stocks: this.$store.getters.stocks
+      };
+      this.$http.put('data.json', data);
+    },
+    loaddata() {
+      this.fetchData();
+    }
+  }
 }
 </script>
 

@@ -10,7 +10,7 @@
 <script>
   import Stock from './Stock';
   export default {
-    name: 'counter',
+    name: 'stocks',
     data: function() {
       return {
         // stocks: [

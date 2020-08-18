@@ -23,7 +23,7 @@
 <script>
 
   export default {
-    name: 'counter',
+    name: 'stock',
     props:['stock'],
     data: function() {
       return {
@@ -37,7 +37,7 @@
          stockPrices: this.stock.prices,
          quantity: this.quantity
        };
-       console.log(order);
+       this.$store.dispatch('buyStock', order);
        this.quantity = 0;
      }
     },

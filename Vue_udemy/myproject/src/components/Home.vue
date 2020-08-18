@@ -1,7 +1,8 @@
 <template>
  <div class="row">
      <div class="col-12">
-       Home
+       <h6>Click on 'End day' to begin a New Day!</h6>
+       <p>Your Funds: {{funds}}</p>
      </div>
   </div>
 </template>
@@ -13,6 +14,11 @@
     data: function() {
       return {
 
+      }
+    },
+    computed: {
+      funds() {
+        return this.$store.getters.funds;
       }
     },
     methods: {

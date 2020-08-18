@@ -1,24 +1,32 @@
 <template>
- <div class="row">
-     <div class="col-12">
-     </div>
+  <div>
+    <stock 
+      v-for="(stock, index) in stocks" 
+      v-bind:key="index"
+      :stock="stock"></stock>
   </div>
 </template>
 
 <script>
-
+import {mapGetters} from 'vuex';
+import Stock from './Stock';
   export default {
-    name: 'counter',
+    name: 'porfolio',
     data: function() {
       return {
-
+       
       }
     },
+    computed: {
+      ...mapGetters({
+        stocks: 'stockPofolio',
+      })
+    },
     methods: {
-     
+
     },
     components: {
-     
+      Stock
     }
   }
 </script>
