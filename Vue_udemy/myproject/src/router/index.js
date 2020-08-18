@@ -17,6 +17,9 @@ import Home from '@/components/Home'
 import Porfolio from '@/components/porfolio/Porfolio'
 import Stocks from '@/components/stocks/Stocks'
 
+
+import Home2 from '@/components/Home2'
+
 Vue.use(Router)
 
 export default new Router({
@@ -82,6 +85,11 @@ export default new Router({
       path: '/stocks',
       name: 'stocks',
       component: Stocks
+    },
+    {
+      path: '/home2',
+      name: 'home2',
+      component: Home2
     },
     {
       path: '*',
